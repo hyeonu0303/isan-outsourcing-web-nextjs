@@ -7,11 +7,11 @@ export function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="text-lg font-bold">ISAN</h3>
-            <p className="mt-2 text-sm text-gray-500">최고의 병원 경영 파트너</p>
+            <p className="mt-2 text-sm text-white">최고의 병원 경영 파트너</p>
           </div>
           <div>
             <h3 className="text-lg font-bold">주소</h3>
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-white">
             51311 창원시 마산회원구 회성남8길
               <br />
               137, 308호
@@ -19,7 +19,7 @@ export function SiteFooter() {
           </div>
           <div>
             <h3 className="text-lg font-bold">연락처</h3>
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-white">
             Mobile: 010-4513-1553
               <br />
               Email: isanmedi@naver.com
@@ -40,7 +40,7 @@ export function SiteFooter() {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500">
+        <div className="mt-8 border-t pt-8 text-center text-sm text-white">
           © 2024 ISAN. All rights reserved.
         </div>
       </div>
