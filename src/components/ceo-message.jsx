@@ -39,14 +39,14 @@ export const CeoMessage = () => {
               고객의 성공이 곧 저희의 성공이라는 믿음으로, 항상 최선을 다하고 있습니다. 
               앞으로도 변함없는 신뢰와 혁신으로 의료계의 발전에 기여하겠습니다.
             </motion.p>
-            <motion.blockquote 
+            {/* <motion.blockquote 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-xl font-semibold text-gray-900 border-l-4 border-main pl-4 my-6"
             >
               "우리의 목표는 단순한 컨설팅을 넘어, 의료 산업의 혁신을 이끄는 것입니다."
-            </motion.blockquote>
+            </motion.blockquote> */}
             {/* <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
