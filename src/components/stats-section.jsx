@@ -1,23 +1,58 @@
+//stats-section.jsx
+import Link from "next/link"
+const sectionUrlWithImg = [
+  {
+    id:1,
+    img:"/image/section1.png",
+    categroy:"회사소개",
+    link:"/company-info"
+  },
+  {
+    id:2,
+    img:"/image/section2.png",
+    categroy:"개원 스케줄러",
+    link:"/opening-schedule"
+  },
+  {
+    id:3,
+    img:"/image/section3.png",
+    categroy:"개원 컬럼",
+    link:"/opening-column"
+  },
+  {
+    id:4,
+    img:"/image/section4.png",
+    categroy:"포트폴리오",
+    link:"/portfolio"
+  },
+  {
+    id:5,
+    img:"/image/section5.png",
+    categroy:"협력업체",
+    link:"/partners"
+  }
+]
+
 export function StatsSection() {
   return (
-    <section className="border-t bg-gray-50">
-      <div className="container py-12 md:py-24">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="text-center">
-            <div className="text-4xl font-bold">1,000+</div>
-            <div className="mt-2 text-gray-500">병원 파트너십</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold">20년+</div>
-            <div className="mt-2 text-gray-500">업계 경력</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold">98%</div>
-            <div className="mt-2 text-gray-500">고객 만족도</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div className="w-full h-full flex items-center justify-center my-6">
+      <section className="w-full h-full grid grid-cols-2 gap-5 p-6 sm:grid-cols-5 lg:grid-cols-5 place-items-center">
+          {sectionUrlWithImg.map((section) => (
+          <Link href={section.link} key={section.id} className="text-center flex flex-col items-center">
+            <img
+              src={section.img}
+              alt={section.alt || `section-${section.id}`}
+              className="
+                w-28 h-28 rounded-full
+                xl:w-32 xl:h-32
+              "
+            />
+            <h3 className="text-md font-bold mt-2 md:text-lg">{section.categroy}</h3>
+          </Link>
+        ))}
+      </section>
+    </div>
   )
 }
+
 

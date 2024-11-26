@@ -1,8 +1,15 @@
 import Image from "next/image"
+import { Button } from "./ui/button"
 
 export function AboutSection() {
   return (
+
     <section id="about" className="border-t">
+      <Button
+        size="lg"
+      >
+
+      </Button>
       <div className="container py-12 md:py-24">
         <div className="grid gap-12 md:grid-cols-2 md:gap-8 lg:gap-16">
           <div className="flex flex-col justify-center space-y-4">
