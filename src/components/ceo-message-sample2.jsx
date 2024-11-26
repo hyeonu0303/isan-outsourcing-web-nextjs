@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Quote } from 'lucide-react'
+import { Quote } from 'lucide-react'
 import Image from 'next/image'
 
 export const CeoMessageSample2 = () => {
@@ -51,10 +50,10 @@ export const CeoMessageSample2 = () => {
               >
                 <Quote className="absolute top-0 left-0 text-gray-300 w-12 h-12 -translate-x-1/2 -translate-y-1/2" />
                 <blockquote className="text-2xl font-semibold text-gray-900 pl-8 py-2 border-l-4 border-main">
-                  "우리의 목표는 단순한 컨설팅을 넘어, <span className="relative inline-block group">
+                  &quot;우리의 목표는 단순한 컨설팅을 넘어, <span className="relative inline-block group">
                     <span className="relative z-10 px-2">의료 산업의 혁신</span>
                     <span className="absolute bottom-1 left-0 w-full h-3 bg-green-500/35 rounded-full" />
-                  </span>을 이끄는 것입니다."
+                  </span>을 이끄는 것입니다.&quot;
                 </blockquote>
               </motion.div>
               <motion.p 
