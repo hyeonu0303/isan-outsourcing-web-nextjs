@@ -18,7 +18,6 @@ const HeaderWrapper = ({
         <p className="text-gray-800 font-bold text-lg xl:text-xl">{title}</p>
       </div>
     </header>
-    
   )
 }
 

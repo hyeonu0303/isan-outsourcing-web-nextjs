@@ -3,31 +3,51 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const pretendard = localFont({
+  src: [
+    {
+      path: './fonts/Pretendard-Light.woff',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Pretendard-Regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Pretendard-Medium.woff',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Pretendard-Bold.woff',
+      weight: '700',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-pretendard',
+  display: 'swap'
+})
 
 export const metadata = {
-  title: "ISAN 병원 컨설팅 및 의료장비 도매",
-  description: "ISAN 병원 컨설팅 및 의료장비 도매 서비스입니다.",
+  title: "Medimaker 병원 컨설팅 및 의료장비 도매",
+  description: "Medimaker 병원 컨설팅 및 의료장비 도매 서비스입니다.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="kr" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
+        className={`${pretendard.variable} font-sans antialiased h-full`}
+        style={{
+          fontFamily: `var(--font-pretendard), -apple-system, BlinkMacSystemFont, 
+            "Apple SD Gothic Neo", "Segoe UI", sans-serif`
+        }}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <header className="w-full flex-shrink-0">
+          <header className="flex-shrink-0 sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 items-center justify-center flex">
             <SiteHeader />
           </header>
 

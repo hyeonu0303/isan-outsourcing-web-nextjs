@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Quote } from 'lucide-react'
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight, Quote } from 'lucide-react'
 import Image from 'next/image'
 
 export const CeoMessageSample2 = () => {

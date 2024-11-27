@@ -1,6 +1,6 @@
 export const CompanyOverview = () => {
   const details = [
-    { label: '회사명', value: '메디컨설트' },
+    { label: '회사명', value: '메디 메이커' },
     { label: '설립일', value: '2022년 3월' },
     { label: '대표이사', value: '홍길동' },
     { label: '본사위치', value: '서울특별시 강남구' },

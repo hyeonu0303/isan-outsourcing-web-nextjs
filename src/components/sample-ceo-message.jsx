@@ -56,15 +56,15 @@ export const SampleCeoMessage = () => {
           </div>
         </CardContent>
       </Card>
-      {/* <motion.blockquote
+      <motion.blockquote
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
         className="text-2xl md:text-3xl font-light text-gray-600 dark:text-gray-400 text-center mt-12 px-4"
       >
-        "우리의 목표는 단순한 컨설팅을 넘어, <br className="hidden md:inline" />
-        <span className="font-semibold text-main">의료 산업의 혁신</span>을 이끄는 것입니다."
-      </motion.blockquote> */}
+        &quot;우리의 목표는 단순한 컨설팅을 넘어, <br className="hidden md:inline" />
+        <span className="font-semibold text-main">의료 산업의 혁신</span>을 이끄는 것입니다.&quot;
+      </motion.blockquote>
     </div>
   )
 }
