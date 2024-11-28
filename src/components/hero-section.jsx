@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 
 export function HeroSection() {
-  const text1 = "MEDI-";
-  const text2 = "MAKER";
+  const text1 = "Maker";
+  const text2 = "MEDI";
   const description =
     "TEL:010-4513-1553 EMAIL:isanmedi@naver.com";
 
@@ -26,7 +26,6 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, type: "spring" }}
           >
-            {/* ISAN */}
             <span className="text-white font-bold">
               {text1.split("").map((char, index) => (
                 <motion.span

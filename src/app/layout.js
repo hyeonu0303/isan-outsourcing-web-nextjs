@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-
+import { Toaster } from "@/components/ui/toaster";
 const pretendard = localFont({
   src: [
     {
@@ -60,6 +60,7 @@ export default function RootLayout({ children }) {
           <footer className="w-full flex-shrink-0">
             <SiteFooter />
           </footer>
+          <Toaster/>
         </div>
       </body>
     </html>

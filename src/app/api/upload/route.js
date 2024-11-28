@@ -11,7 +11,8 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Title, text, and image are required.' }, { status: 400 });
   }
 
-  const fileName = `${Date.now()}-${file.name}`;
+  const extension = file.name.split('.').pop(); // 확장자 추출
+  const fileName = `${Date.now()}.${extension}`; // 타임스탬프 기반 파일명 생성
 
   // Supabase Storage에 파일 업로드
   const { data: uploadData, error: uploadError } = await supabase.storage

@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -44,27 +43,25 @@ export function SiteFooter() {
   return (
     <footer className="border-t bg-[#00857C] text-white w-full flex flex-col items-center justify-between h-full">
       <div className="container py-4 px-4 md:py-12 flex flex-col items-center">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-4 w-full">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-4 w-full lg:gap-20">
+          <h3 className="text-lg font-bold">MakerMEDI</h3>
           <div>
-            <h3 className="text-lg font-bold">ISAN</h3>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold hidden sm:invisible">주소</h3>
-            <p className="text-sm text-white font-semibold">
+            <h3 className="text-lg font-bold hidden lg:block">주소</h3>
+            <p className="text-sm text-white font-semibold mt-2">
               51311 창원시 마산회원구 회성남8길 137, 308호
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-bold hidden sm:invisible">연락처</h3>
-            <p className="mt-2 text-sm text-white font-semibold">
+            <h3 className="text-lg font-bold hidden lg:block">연락처</h3>
+            <p className="text-sm text-white font-semibold mt-2">
               TEL: 010-4513-1553
               <br />
-              Email: isanmedi@naver.com
+              Email: makermedi@naver.com
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-bold hidden sm:invisible">관리자</h3>
-            {/* <p className="mt-2 text-sm text-white font-semibold">
+            <h3 className="text-lg font-bold hidden lg:block">관리자</h3>
+            <p className="mt-2 text-sm text-white font-semibold">
               {isAdmin ? (
                 <button onClick={handleLogout} className="underline">
                   관리자 로그아웃
@@ -72,12 +69,12 @@ export function SiteFooter() {
               ) : (
                 <Link href="/access">관리자 로그인</Link>
               )}
-            </p> */}
+            </p>
           </div>
         </div>
         {/* Centered copyright text */}
         <div className="border-t w-full mt-4 pt-4 flex justify-center items-center text-sm text-white">
-          © 2024 ISAN. All rights reserved.
+          © 2024 MakerMEDI. All rights reserved.
         </div>
       </div>
     </footer>

@@ -13,26 +13,50 @@ const portfolioData = [
   {
     id: 1,
     imgUrl: [
-      { src: "/portfolio/portfolio1.jpeg", alt: "포트폴리오1" },
-      { src: "/portfolio/portfolio2.jpeg", alt: "포트폴리오2" },
-      { src: "/portfolio/portfolio3.jpeg", alt: "포트폴리오3" },
-      { src: "/portfolio/portfolio4.jpeg", alt: "포트폴리오4" },
-      { src: "/portfolio/portfolio5.jpeg", alt: "포트폴리오5" },
+      { src: "/portfolio/changwon/changwon1.jpeg", alt: "창원 서울가정의학과" },
+      { src: "/portfolio/changwon/changwon2.jpeg", alt: "창원 서울가정의학과" },
+      { src: "/portfolio/changwon/changwon3.jpeg", alt: "창원 서울가정의학과" },
+      { src: "/portfolio/changwon/changwon4.jpeg", alt: "창원 서울가정의학과" },
+      { src: "/portfolio/changwon/changwon5.jpeg", alt: "창원 서울가정의학과" },
+      { src: "/portfolio/changwon/changwon6.jpeg", alt: "창원 서울가정의학과" },
     ],
-    companyName: "OOO 병원",
-    description: "최신 의료 시설과 편안한 환자 경험을 위한 인테리어 디자인",
+    companyName: "창원 서울가정의학과",
+    description: "",
   },
   {
     id: 2,
     imgUrl: [
-      { src: "/portfolio/portfolio6.jpeg", alt: "포트폴리오6" },
-      { src: "/portfolio/portfolio7.jpeg", alt: "포트폴리오7" },
-      { src: "/portfolio/portfolio8.jpeg", alt: "포트폴리오8" },
-      { src: "/portfolio/portfolio9.jpeg", alt: "포트폴리오9" },
-      { src: "/portfolio/portfolio10.jpeg", alt: "포트폴리오10" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine1.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine2.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine3.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine4.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine5.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine6.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine7.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine8.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine9.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine1.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine11.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine12.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine13.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine14.jpeg", alt: "창원 정재훈 내과" },
     ],
-    companyName: "OOO 병원",
-    description: "환자 중심의 현대적인 의료 공간 디자인",
+    companyName: "창원 정재훈 내과",
+    description: "",
+  },
+  {
+    id: 3,
+    imgUrl: [
+      { src: "/portfolio/jinju_tamna/jinju_tamna1.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna2.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna3.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna4.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna5.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna6.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna7.jpeg", alt: "진주 탐나는B&S의원" },
+    ],
+    companyName: "진주 탐나는B&S의원",
+    description: "",
   },
 ]
 
@@ -40,7 +64,7 @@ const CarouselArrowButton = ({ onClick, className, children, disabled }) => (
   <button
     onClick={onClick}
     className={`
-      absolute top-1/2 -translate-y-1/2 z-10
+      absolute top-1/2 -translate-y-1/2 z-1
       bg-white/90 hover:bg-white shadow-md
       w-10 h-10 rounded-full
       flex items-center justify-center

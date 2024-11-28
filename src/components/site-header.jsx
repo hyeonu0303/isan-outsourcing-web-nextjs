@@ -37,22 +37,24 @@ export function SiteHeader() {
   }, []);
 
   return (
-      <div className="w-full flex h-20 items-center justify-between px-12">
+      <div className="w-full flex h-20 items-center justify-between px-4 lg:px-12">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <Image 
-              src="/logo/logo-medimaker-main.png" alt="MediMaker 로고"  
-              width={90} height={90}
-              className="mt-1"
-            />
+          <Image 
+            src="/logo/logo-medimaker-main.png" 
+            alt="MediMaker 로고"  
+            width={90} 
+            height={90}
+            className="mt-1 md:w-[90px] w-[60px]"
+          />
           </Link>
         </div>
 
         {/* 데스크탑 네비게이션 */}
         <nav className="hidden md:flex md:items-center">
           <div className="flex items-center space-x-6">
-            <Link href="/info-company" className="text-md font-semibold">회사소개</Link>
-            <Link href="/opening-schedule" className="text-md font-semibold">개원 스케쥴러</Link>
+            <Link href="/info-company" className="text-md font-semibold">CEO 인사말</Link>
+            <Link href="/opening-schedule" className="text-md font-semibold">개원 일정</Link>
             <Link href="/opening-column" className="text-md font-semibold">개원 컬럼</Link>
             <Link href="/portfolio" className="text-md font-semibold">포트폴리오</Link>
             <Link href="/partners" className="text-md font-semibold">협력업체</Link>
@@ -60,7 +62,7 @@ export function SiteHeader() {
               isAdmin && (
                 <>
                   <Link href="/column" className="text-md font-semibold">
-                    칼럼 관리
+                    컬럼 관리
                   </Link>
                   <Link href="/partner" className="text-md font-semibold">
                     협력업체 관리
@@ -75,7 +77,7 @@ export function SiteHeader() {
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon">
-              <Menu className="!w-8 !h-8"/>
+              <Menu className="!w-6 !h-6"/>
               <span className="sr-only">메뉴 열기</span>
             </Button>
           </SheetTrigger>
@@ -83,12 +85,12 @@ export function SiteHeader() {
             <nav className="flex flex-col space-y-4 mt-6">
               <SheetClose asChild>
                 <Link href="/info-company" className="text-sm font-medium">
-                  회사소개
+                  CEO 인사말
                 </Link>
               </SheetClose>
               <SheetClose asChild>
                 <Link href="/opening-schedule" className="text-sm font-medium">
-                  개원 스케쥴러
+                  개원 일정
                 </Link>
               </SheetClose>
               <SheetClose asChild>

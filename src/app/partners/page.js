@@ -1,28 +1,10 @@
-'use client'
-
-import { useState } from "react"
-import { motion } from "framer-motion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import HeaderWrapper from "@/components/header-wrapper"
 import MainContainer from "@/components/main-container"
-import { PartnersData } from "./__mock"
+import supabase from "@/lib/supabase"
 
-const categories = [
-  { id: 1, name: "전체" },
-  { id: 2, name: "부동산" },
-  { id: 3, name: "인테리어" },
-  { id: 4, name: "마케팅" },
-  { id: 5, name: "의료기기" },
-  { id: 6, name: "미용기기" },
-  { id: 7, name: "냉난방" },
-  { id: 8, name: "철거/소방" },
-  { id: 9, name: "쇼파제작" },
-  { id: 10, name: "각종 렌탈 관련" },
-  { id: 11, name: "법정의무교육" },
-]
-
-const LogoScroll = ({ logos }) => {
+const LogoCard = ({ logos }) => {
   if (!logos || logos.length === 0) return null
   
   return (
@@ -35,15 +17,15 @@ const LogoScroll = ({ logos }) => {
           >
             <CardContent className="p-6 flex items-center justify-center h-28">
               {
-                logo.imgUrl === "" || logo.imgUrl === null ? (
+                logo.image_url === "" || logo.image_url === null ? (
                   <div className="w-full text-center">
-                    <p className="text-3xl font-bold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">
-                      {logo.name}
+                    <p className="text-2xl font-bold text-gray-700">
+                      {logo.title}
                     </p>
                   </div>
                 ) : (
                   <img
-                    src={logo.imgUrl}
+                    src={logo.image_url}
                     alt={`Partner ${logo.id}`}
                     className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />
@@ -57,7 +39,19 @@ const LogoScroll = ({ logos }) => {
   )
 }
 
-export default function Partners() {
+export default async function Partners() {
+
+  const resPartnerData = await supabase.from('partner').select('*');
+  const resCategoryData = await supabase.from('categories').select('*');
+  const { data: partnerData, error: partnerError } = resPartnerData;
+  const {data: categoryData, error: categoryError} = resCategoryData;
+  if(partnerError || categoryError) {
+    return <div>에러가 발생했습니다. 새로고침 부탁드립니다.</div>
+  }
+  const sortedCategories = [
+    { id: 'all', name: '전체' }, 
+    ...(categoryData ? [...categoryData].sort((a, b) => a.name.localeCompare(b.name)) : [])
+  ];
   return (
     <div className="flex h-full w-full flex-col">
       <HeaderWrapper
@@ -67,28 +61,28 @@ export default function Partners() {
       <MainContainer>
         <Tabs defaultValue="전체" className="w-full px-4">
           <div className="sticky top-0 bg-white z-10 pb-4">
-            <TabsList className="grid w-full grid-cols-3 md:grid-cols-6 lg:grid-cols-11 gap-2">
-              {categories.map((cat) => (
+            <TabsList className="grid w-full grid-cols-3 md:grid-cols-6 lg:grid-cols-12 gap-2">
+              {sortedCategories.map((category) => (
                 <TabsTrigger
-                  value={cat.name}
-                  key={cat.id}
+                  value={category.name}
+                  key={category.id}
                   className="text-sm md:text-md font-semibold transition-colors"
                 >
-                  {cat.name}
+                  {category.name}
                 </TabsTrigger>
               ))}
             </TabsList>
           </div>
 
-          {categories.map((category) => (
+          {sortedCategories.map((category) => (
             <TabsContent key={category.id} value={category.name}>
               <Card className="border-none shadow-none bg-transparent">
                 <CardContent className="p-0 mt-4">
-                  <LogoScroll
+                  <LogoCard
                     logos={
                       category.name === "전체"
-                        ? PartnersData
-                        : PartnersData.filter((logo) => logo.category === category.name)
+                        ? partnerData
+                        : partnerData.filter((logo) => logo.category_id === category.id)
                     }
                   />
                 </CardContent>

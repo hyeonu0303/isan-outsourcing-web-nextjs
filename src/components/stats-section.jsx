@@ -4,7 +4,7 @@ const sectionUrlWithImg = [
   {
     id:1,
     img:"/image/section1.png",
-    categroy:"회사소개",
+    categroy:"CEO 인사말",
     link:"/info-company"
   },
   {
