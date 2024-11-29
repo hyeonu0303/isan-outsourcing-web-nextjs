@@ -1,6 +1,8 @@
+'use client';
 import HeaderWrapper from "@/components/header-wrapper";
 import MainContainer from "@/components/main-container";
 import supabase from '@/lib/supabase';
+import { useState, useEffect } from "react";
 function ColumnUI({
   title,
   image_url,
@@ -28,10 +30,20 @@ function ColumnUI({
     </div>
   );
 }
-export default async function OpeningColumn() {
+export default function OpeningColumn() {
 
-    const res = await supabase.from('column').select('*');
-    const { data:columnData } = res;
+  const [columnData, setColumnData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await supabase.from('column').select('*');
+      if (res.data) {
+        setColumnData(res.data);
+      }
+    }
+    fetchData();
+  }, []);
+    
 
   return (
     <div className="w-full h-full flex flex-col">
