@@ -79,7 +79,7 @@ export default function InfoCompany() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
       <HeaderWrapper
-        title="CEO 인사말"
+        title="인사말"
         subTitle="최고의 병원 컨설팅으로 보답하겠습니다"
       />
       <MainContainer>

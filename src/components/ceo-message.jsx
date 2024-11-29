@@ -27,7 +27,7 @@ export const CeoMessage = () => {
         </div>
         <Card className="w-full md:w-2/3 md:absolute right-0 top-1/2 md:-translate-y-1/2 bg-white/80 backdrop-blur-md shadow-xl">
           <CardContent className="p-8">
-            <Badge variant="outline" className="mb-4">CEO 인사말</Badge>
+            <Badge variant="outline" className="mb-4">인사말</Badge>
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

@@ -4,13 +4,13 @@ const sectionUrlWithImg = [
   {
     id:1,
     img:"/image/section1.png",
-    categroy:"CEO 인사말",
+    categroy:"인사말",
     link:"/info-company"
   },
   {
     id:2,
     img:"/image/section2.png",
-    categroy:"개원 스케줄러",
+    categroy:"개원 일정",
     link:"/opening-schedule"
   },
   {

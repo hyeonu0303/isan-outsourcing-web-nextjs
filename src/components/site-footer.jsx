@@ -48,7 +48,7 @@ export function SiteFooter() {
           <div>
             <h3 className="text-lg font-bold hidden lg:block">주소</h3>
             <p className="text-sm text-white font-semibold mt-2">
-              51311 창원시 마산회원구 회성남8길 137, 308호
+              창원시 마산회원구 광려천서로 153, 106호
             </p>
           </div>
           <div>

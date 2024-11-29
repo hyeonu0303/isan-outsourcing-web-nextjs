@@ -53,7 +53,7 @@ export function SiteHeader() {
         {/* 데스크탑 네비게이션 */}
         <nav className="hidden md:flex md:items-center">
           <div className="flex items-center space-x-6">
-            <Link href="/info-company" className="text-md font-semibold">CEO 인사말</Link>
+            <Link href="/info-company" className="text-md font-semibold">인사말</Link>
             <Link href="/opening-schedule" className="text-md font-semibold">개원 일정</Link>
             <Link href="/opening-column" className="text-md font-semibold">개원 컬럼</Link>
             <Link href="/portfolio" className="text-md font-semibold">포트폴리오</Link>
@@ -85,7 +85,7 @@ export function SiteHeader() {
             <nav className="flex flex-col space-y-4 mt-6">
               <SheetClose asChild>
                 <Link href="/info-company" className="text-sm font-medium">
-                  CEO 인사말
+                  인사말
                 </Link>
               </SheetClose>
               <SheetClose asChild>
