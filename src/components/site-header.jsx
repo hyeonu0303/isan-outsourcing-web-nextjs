@@ -42,7 +42,7 @@ export function SiteHeader() {
           <Link href="/" className="flex items-center space-x-2">
           <Image 
             src="/logo/logo-medimaker-main.png" 
-            alt="MediMaker 로고"  
+            alt="MakeMEDI 로고"  
             width={90} 
             height={90}
             className="mt-1 md:w-[90px] w-[60px]"

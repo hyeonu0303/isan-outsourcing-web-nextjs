@@ -31,8 +31,8 @@ const pretendard = localFont({
 })
 
 export const metadata = {
-  title: "Medimaker 병원 컨설팅 및 의료장비 도매",
-  description: "Medimaker 병원 컨설팅 및 의료장비 도매 서비스입니다.",
+  title: "MakeMEDI 병원 컨설팅 및 의료장비 도매",
+  description: "MakeMEDI 병원 컨설팅 및 의료장비 도매 서비스입니다.",
 };
 
 export default function RootLayout({ children }) {

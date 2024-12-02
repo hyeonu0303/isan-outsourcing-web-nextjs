@@ -64,23 +64,23 @@ const timelineData = [
     weeks: [
       {
         week: 1,
-        tasks: "사업계획 수립",
-        details: "시장 조사, 경쟁 분석, 재무 계획 수립",
+        tasks: "초회미팅",
+        details: "개원예정입지, 개원규모 및 예산 파악, 상호결정",
       },
       {
         week: 2,
-        tasks: "부지 선정",
-        details: "위치 선정, 임대차 계약 협상, 계약 체결",
+        tasks: "입지선정, 사업자등록 발급, 자금준비",
+        details: "상권분석/경쟁분석을 통한 입지 압축 후 임장을 통하여 최종입지선정, 임대차 계약(계약금납부), 사업자등록증 발급",
       },
       {
         week: 3,
-        tasks: "인테리어 업체 선정",
-        details: "업체 비교, 견적 요청, 최종 선정",
+        tasks: "입지선정, 사업자등록 발급, 자금준비, 관련업체 미팅",
+        details: "대출신청, 인테리어/의료기기/냉난방/철거/소방/집기/EMR/보안 등 업체 미팅 시작",
       },
       {
         week: 4,
-        tasks: "인테리어 설계",
-        details: "컨셉 결정, 도면 작성, 자재 선택",
+        tasks: "관련업체 미팅, 인테리어 공정시작",
+        details: "업체비교, 견적요청, 최종선정, 납품 및 시공일정 조율, 도면작성 및 수정 시작",
       },
     ],
   },
@@ -89,23 +89,23 @@ const timelineData = [
     weeks: [
       {
         week: 5,
-        tasks: "의료장비 계획",
-        details: "필요 장비 목록 작성, 공급업체 조사",
+        tasks: "인테리어공정, 관련업체 미팅, 세무/노무/행정",
+        details: "세무/노무사 선정, 인테리어 공정 진행, 컨셉결정(색상), 자재선택",
       },
       {
         week: 6,
-        tasks: "인테리어 공사 시작",
-        details: "철거 작업, 전기 및 설비 공사",
+        tasks: "인테리어공정, 온/오프라인 마케팅",
+        details: "로고제작 및 현수막, 간판, 내부싸인물 선정, 인테리어 공사 진행",
       },
       {
         week: 7,
-        tasks: "의료장비 구매",
-        details: "장비 주문, 납품 일정 조율",
+        tasks: "인테리어공정, 인력채용",
+        details: "필요인력구성, 모집공고, 면접 후 인력채용, 인테리어 공사 진행",
       },
       {
         week: 8,
-        tasks: "인력 채용",
-        details: "채용 공고, 면접, 최종 선발",
+        tasks: "인테리어 공정, 원내 집기 및 비품결정",
+        details: "유니폼, 베드, 정수기 등 원내 집기 렌탈/구매 결정 및 납품일정조율",
       },
     ],
   },
@@ -114,23 +114,23 @@ const timelineData = [
     weeks: [
       {
         week: 9,
-        tasks: "행정 절차",
-        details: "의료기관 개설 신고, 각종 인허가 취득",
+        tasks: "인테리어 공정, 행정절차 및 홍보시작",
+        details: "의료기관 개설신고, 각종인허가, 소방점검 등, 개원현수막게시",
       },
       {
         week: 10,
-        tasks: "운영 시스템 구축",
-        details: "EMR 시스템 설치, 직원 교육",
+        tasks: "인테리어 공정, EMR 및 전산 구축",
+        details: "EMR설치 및 내부전산망작업, 보안시스템, 차트준비 및 인쇄물결정",
       },
       {
         week: 11,
-        tasks: "시운전",
-        details: "장비 테스트, 업무 프로세스 점검",
+        tasks: "장비입고, 시운전, 가구배치, 약품세팅, 장비세팅 및 직원교육",
+        details: "장비입고 및 시운전, 직원교육, 쇼파입고, 약제코딩",
       },
       {
         week: 12,
-        tasks: "최종 점검",
-        details: "안전 점검, 개원식 준비",
+        tasks: "최종점검",
+        details: "안전점검 및 개원준비",
       },
     ],
   },
@@ -180,7 +180,6 @@ const Timeline = ({ monthData }) => (
 
 // TimelineTabs Component
 function TimelineTabs() {
-
   return (
     <Tabs className="w-full" defaultValue="1">
       <TabsList className="grid w-full grid-cols-3">
@@ -205,15 +204,41 @@ function TimelineTabs() {
       </TabsList>
       <div className="content-container flex flex-col xl:flex-row gap-[10px]">
         <div className="hidden xl:w-2/3 xl:block">
-          <Suspense fallback={<TabContentLoader />}>
-            <img
-              src={`/image/calendar1.png`}
-              alt={`1개월차 달력`}
-              className="w-full h-auto"
-            />
-          </Suspense>
+          <TabsContent value="1">
+            <Suspense fallback={<TabContentLoader />}>
+              <div className="py-10 px-16">
+                <img
+                  src="/image/1month.png"
+                  alt="1개월차 달력"
+                  className="w-full h-auto"
+                />
+              </div>
+            </Suspense>
+          </TabsContent>
+          <TabsContent value="2">
+            <Suspense fallback={<TabContentLoader />}>
+              <div className="py-10 px-16">
+                <img
+                  src="/image/2month.png"
+                  alt="2개월차 달력"
+                  className="w-full h-auto"
+                />
+              </div>
+            </Suspense>
+          </TabsContent>
+          <TabsContent value="3">
+            <Suspense fallback={<TabContentLoader />}>
+              <div className="py-10 px-16">
+                <img
+                  src="/image/3month.png"
+                  alt="3개월차 달력"
+                  className="w-full h-auto"
+                />
+              </div>
+            </Suspense>
+          </TabsContent>
         </div>
-        <Card className="w-full xl:w-1/3 mx-auto justify-between border-none">
+        <Card className="w-full xl:w-1/2 mx-auto justify-between border-none">
           <CardHeader>
             <CardTitle className="text-xl font-bold text-center">
               병원 개원 준비 타임라인
@@ -236,7 +261,6 @@ function TimelineTabs() {
     </Tabs>
   );
 }
-
 const StepScheduleCard = ({
   step,
   title,

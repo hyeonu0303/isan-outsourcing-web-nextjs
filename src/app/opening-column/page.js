@@ -15,7 +15,7 @@ function ColumnUI({
         <div className="relative -top-0 sm:-top-8 shadow-lg">
           <img
             src={image_url}
-            alt="MakerMEDI 칼럼 이미지"
+            alt="MakeMEDI 칼럼 이미지"
             className="w-full min-h-[300px] object-cover rounded-lg shadow-lg"
           />
         </div>

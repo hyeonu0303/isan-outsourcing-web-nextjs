@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export function HeroSection() {
-  const text1 = "Maker";
+  const text1 = "Make";
   const text2 = "MEDI";
   const description =
     "TEL:010-4513-1553 EMAIL:isanmedi@naver.com";

@@ -68,7 +68,7 @@ export const CeoMessageSample2 = () => {
 
 다른 지역은 컨설팅을 하지 않습니다. 오로지 인프라가 구성이 되어있는 경남/대전/세종 지역만을 타겟으로 오픈컨설팅을 진행하고 있습니다.  <br/> <br/>
 
-선생님들의 중요한 출발과 성공적인 개원에 마중물 역할을 해내며, 분야별 관계사들의 개원이라는 한가지 목표달성에 최선의 시너지를 낼 수 있도록, 저희 MakerMEDI가 책임지고 도와드리겠습니다. 믿고 함께해주시면 좋은 결과로 증명하겠습니다.
+선생님들의 중요한 출발과 성공적인 개원에 마중물 역할을 해내며, 분야별 관계사들의 개원이라는 한가지 목표달성에 최선의 시너지를 낼 수 있도록, 저희 MakeMEDI가 책임지고 도와드리겠습니다. 믿고 함께해주시면 좋은 결과로 증명하겠습니다.
 감사합니다.
               </motion.p>
               <motion.div
@@ -80,7 +80,7 @@ export const CeoMessageSample2 = () => {
                 <div className="flex justify-end items-center gap-8">
                   <p 
                     className="text-lg font-semibold"
-                  >MakerMEDI 대표이사 최기영</p>
+                  >MakeMEDI 대표이사 최기영</p>
                   <img
                     src="/image/sign-bg-remove.png"
                     alt="CEO 서명"
