@@ -13,12 +13,12 @@ const portfolioData = [
   {
     id: 1,
     imgUrl: [
-      { src: "/portfolio/jinju_tamna/jinju_tamna1.jpeg", alt: "진주 탐나는B&S의원" },
-      { src: "/portfolio/jinju_tamna/jinju_tamna2.jpeg", alt: "진주 탐나는B&S의원" },
-      { src: "/portfolio/jinju_tamna/jinju_tamna3.jpeg", alt: "진주 탐나는B&S의원" },
-      { src: "/portfolio/jinju_tamna/jinju_tamna4.jpeg", alt: "진주 탐나는B&S의원" },
       { src: "/portfolio/jinju_tamna/jinju_tamna5.jpeg", alt: "진주 탐나는B&S의원" },
       { src: "/portfolio/jinju_tamna/jinju_tamna6.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna3.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna4.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna1.jpeg", alt: "진주 탐나는B&S의원" },
+      { src: "/portfolio/jinju_tamna/jinju_tamna2.jpeg", alt: "진주 탐나는B&S의원" },
       { src: "/portfolio/jinju_tamna/jinju_tamna7.jpeg", alt: "진주 탐나는B&S의원" },
     ],
     companyName: "진주 탐나는 B&S의원",
@@ -27,10 +27,9 @@ const portfolioData = [
   {
     id: 2,
     imgUrl: [
-      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine1.jpeg", alt: "창원 정재훈 내과" },
-      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine2.jpeg", alt: "창원 정재훈 내과" },
       { src: "/portfolio/jung_endocrine_clinic/jung_endocrine3.jpeg", alt: "창원 정재훈 내과" },
       { src: "/portfolio/jung_endocrine_clinic/jung_endocrine4.jpeg", alt: "창원 정재훈 내과" },
+      { src: "/portfolio/jung_endocrine_clinic/jung_endocrine2.jpeg", alt: "창원 정재훈 내과" },
       { src: "/portfolio/jung_endocrine_clinic/jung_endocrine5.jpeg", alt: "창원 정재훈 내과" },
       { src: "/portfolio/jung_endocrine_clinic/jung_endocrine6.jpeg", alt: "창원 정재훈 내과" },
       { src: "/portfolio/jung_endocrine_clinic/jung_endocrine7.jpeg", alt: "창원 정재훈 내과" },
@@ -50,9 +49,9 @@ const portfolioData = [
     imgUrl: [
       { src: "/portfolio/changwon/changwon1.jpeg", alt: "창원 서울가정의학과" },
       { src: "/portfolio/changwon/changwon2.jpeg", alt: "창원 서울가정의학과" },
+      { src: "/portfolio/changwon/changwon5.jpeg", alt: "창원 서울가정의학과" },
       { src: "/portfolio/changwon/changwon3.jpeg", alt: "창원 서울가정의학과" },
       { src: "/portfolio/changwon/changwon4.jpeg", alt: "창원 서울가정의학과" },
-      { src: "/portfolio/changwon/changwon5.jpeg", alt: "창원 서울가정의학과" },
       { src: "/portfolio/changwon/changwon6.jpeg", alt: "창원 서울가정의학과" },
     ],
     companyName: "창원 서울가정의학과",
